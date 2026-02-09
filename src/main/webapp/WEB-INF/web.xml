@@ -11,4 +11,19 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.xhtml</welcome-file>
   </welcome-file-list>
+  
+  
+   <context-param>
+  <param-name>dbUrl</param-name>
+  <param-value>jdbc:mysql://localhost:3306/mydb</param-value>
+  </context-param>
+  <context-param>
+  <param-name>dbUser</param-name>
+  <param-value>root</param-value>
+  </context-param>
+  
+  <context-param>
+  <param-name>dbPassword</param-name>
+  <param-value>Lulu@341</param-value>
+  </context-param>
 </web-app>
