@@ -27,9 +27,11 @@ public class ProductServlet extends HttpServlet {
 		
 		ServletContext servletContext = config.getServletContext();
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection(servletContext.getInitParameter("dbUrl"),servletContext.getInitParameter("dbUser"),
 					servletContext.getInitParameter("dbPassword"));
+			
+			PreparedStatement statement = con.prepareStatement("insert into product values(?,?,?,?)");
 		} catch (SQLException e) {
 			
 			e.printStackTrace();
